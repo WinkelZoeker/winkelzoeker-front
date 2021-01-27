@@ -23,6 +23,10 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## Ref
+
+https://auralinna.blog/post/2018/how-to-build-a-complete-form-with-vue-js/
+
 
 ## Author
 
