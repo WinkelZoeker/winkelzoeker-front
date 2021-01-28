@@ -45,6 +45,12 @@
             {{form}}
         </pre>
       </div>
+      <div class="alert alert-info">
+        <p><strong>{{ $t('form.responseInfo' ) }}</strong></p>
+        <pre>
+            {{nearestStores}}
+        </pre>
+      </div>
       <p class="text-center">
         <a href="#" class="btn btn-secondary" @click.prevent="reload()">{{ $t('form.return' ) }}</a>
       </p>

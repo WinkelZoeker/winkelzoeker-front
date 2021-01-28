@@ -13,13 +13,11 @@ export default {
       types: this.getTypes(),
       submitting: false,
       form: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        terms: false,
-        type: null,
-        additionalInfo: ''
-      }
+        latitude:'',
+        longitude:'',
+        limit:''
+      },
+      nearestStores: []
     }
   },
   methods: {
@@ -39,7 +37,8 @@ export default {
     },
     sendFormData() {
       this.enableSubmitLoader();
-      axios.post(Vue.config.formApiUrl, this.form).then(response => {
+      console.log(`URL: ${Vue.config.formApiUrl}`);
+      axios.get(Vue.config.formApiUrl, this.form).then(response => {
         this.submitSuccess(response);
         this.disableSubmitLoader();
       }).catch(error => {
@@ -48,9 +47,10 @@ export default {
       });
     },
     submitSuccess(response) {
-      if (response.data.success) {
+      if (response.status === 200) {
         this.isSubmitted = true;
         this.isError = false;
+        this.nearestStores = response.data;
       } else {
         this.errorHeader = 'error.invalidFields';
         this.errors = response.data.errors;
@@ -135,7 +135,7 @@ export default {
     form: {
       latitude: { numeric },
       longitude: { numeric },
-      limit: { required, numeric }
+      limit: { numeric }
     }
   },
   watch: {

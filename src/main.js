@@ -8,6 +8,7 @@ Vue.use(VueI18n);
 Vue.use(Vuelidate);
 
 Vue.config.formApiUrl = process.env.FORM_API_URL;
+// Vue.config.formApiUrl = process.env.WINKELZOEKER_API_URL;
 
 const i18n = new VueI18n({
   locale: 'en',
