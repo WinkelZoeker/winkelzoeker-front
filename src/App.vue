@@ -1,37 +1,61 @@
 <template>
-  <div id="app" class="container">
-    <div class="row justify-content-center">
-      <div class="col-xs-12 col-sm-10 col-md-6">
-        <h1 class="text-center">{{title}}</h1>
-        <app-form></app-form>
-      </div>
-    </div>
+  <div id="app" class="small-container">
+    <h1>Stores</h1>
+
+    <search-form @search:store="searchStore" />
+    <stores-table :stores="stores" />
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import Form from './components/form/Form.vue';
+import SearchForm from "@/components/SearchForm.vue";
+import StoresTable from "@/components/StoresTable.vue";
 
 export default {
-  name: 'app',
-  data () {
-    return {
-      title: 'WinkelZoeker'
-    }
-  },
+  name: "app",
   components: {
-    appForm: Form
-  }
-}
+    SearchForm,
+    StoresTable,
+  },
+  data() {
+    return {
+      stores: [
+        {
+          uuid: 1,
+          name: "Jumbo Kastelenplein",
+          address: "Kastelenplein, Eindhoven",
+        },
+        {
+          uuid: 2,
+          name: "Jumbo Hanevoet",
+          address: "Hanevoet, Eindhoven",
+        },
+      ],
+    };
+  },
+  methods: {
+    searchStore(searchParams) {
+      console.log(`App => searchParams: ${JSON.stringify(searchParams)}`);
+      this.stores = [
+        ...this.stores,
+        {
+          uuid: searchParams.limit,
+          name: searchParams.latitude,
+          address: searchParams.longitude,
+        },
+      ];
+    },
+  },
+};
 </script>
 
-<style lang="scss">
-  h1 {
-    margin-bottom: 30px;
-  }
+<style>
+button {
+  background: #009435;
+  border: 1px solid #009435;
+}
 
-  #app {
-    padding: 20px;
-  }
+.small-container {
+  max-width: 680px;
+}
 </style>

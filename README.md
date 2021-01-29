@@ -10,23 +10,36 @@
 
 ## Build Setup
 
-``` bash
-# install dependencies
+```
 npm install
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-# build for production with minification
+### Compiles and minifies for production
+```
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Ref
 
+https://www.taniarascia.com/getting-started-with-vue/
 https://auralinna.blog/post/2018/how-to-build-a-complete-form-with-vue-js/
 
+## NOTES
+
+Continue from Ref 1, Computed Properties
 
 ## Author
 
