@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="small-container">
-    <h1>Stores</h1>
+    <h1>WinkelZoeker</h1>
 
     <search-form @search:store="searchStore" />
     <stores-table :stores="stores" />
@@ -36,6 +36,8 @@ export default {
   methods: {
     searchStore(searchParams) {
       console.log(`App => searchParams: ${JSON.stringify(searchParams)}`);
+      console.log(`URL: ${process.env.SEARCH_API_URL}`);
+
       this.stores = [
         ...this.stores,
         {
