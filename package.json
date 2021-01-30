@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf node_modules/ reports/ ./dist ./coverage",
-    "serve": "./node_modules/.bin/vue-cli-service serve",
+    "serve": "rm -rf node_modules/.cache; ./node_modules/.bin/vue-cli-service serve",
     "build": "./node_modules/.bin/vue-cli-service build",
     "lint": "./node_modules/.bin/vue-cli-service lint",
     "image:build": "docker build -t $npm_package_organization/$npm_package_image:$npm_package_tag .",
