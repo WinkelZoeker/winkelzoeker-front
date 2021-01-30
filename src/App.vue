@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="small-container">
-    <h1>WinkelZoeker</h1>
+    <h1>WinkelZoeker - Version 1</h1>
 
     <search-form @search:store="searchStore" />
     <stores-table :stores="stores" />
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import SearchForm from "@/components/SearchForm.vue";
 import StoresTable from "@/components/StoresTable.vue";
 
@@ -19,36 +20,27 @@ export default {
   },
   data() {
     return {
-      stores: [
-        {
-          uuid: 1,
-          name: "Jumbo Kastelenplein",
-          address: "Kastelenplein, Eindhoven",
-        },
-        {
-          uuid: 2,
-          name: "Jumbo Hanevoet",
-          address: "Hanevoet, Eindhoven",
-        },
-      ],
+      stores: [],
     };
   },
   methods: {
     searchStore(searchParams) {
-      console.log(`App => searchParams: ${JSON.stringify(searchParams)}`);
-      console.log(`APP.URL: ${process.env.VUE_APP_SEARCH_API_URL}`);
+      const searchApiUrl = process.env.VUE_APP_SEARCH_API_URL;
+      const queryParams = {
+        params: {...searchParams}
+      };
 
-      console.log(`URL FORM: ${process.env.VUE_APP_TITLE}`);
+      console.log(`URL FORM => ${searchApiUrl}`);
 
-      this.stores = [
-        ...this.stores,
-        {
-          uuid: searchParams.limit,
-          name: searchParams.latitude,
-          address: searchParams.longitude,
-        },
-      ];
-    },
+
+      axios.get(searchApiUrl, queryParams).then(response => {
+        console.log(`RESPONSE: ${JSON.stringify(response, null, 2)}`);
+        this.stores = response.data;
+      }).catch(error => {
+        console.log(`ERROR: ${JSON.stringify(error, null, 2)}`);
+      });
+
+},
   },
 };
 </script>

@@ -3,10 +3,10 @@
     <table>
       <!-- ...thead... -->
       <tbody>
-        <tr v-for="store in stores" :key="store.id">
-          <td>{{ store.uuid }}</td>
-          <td>{{ store.name }}</td>
-          <td>{{ store.address }}</td>
+        <tr v-for="store in stores" :key="store.uuid">
+          <td>{{ store.addressName }}</td>
+          <td>{{ `${store.street}, ${store.street2}` }}</td>
+          <td>{{ store.city }}</td>
         </tr>
       </tbody>
     </table>
