@@ -36,7 +36,9 @@ export default {
   methods: {
     searchStore(searchParams) {
       console.log(`App => searchParams: ${JSON.stringify(searchParams)}`);
-      console.log(`URL: ${process.env.SEARCH_API_URL}`);
+      console.log(`APP.URL: ${process.env.VUE_APP_SEARCH_API_URL}`);
+
+      console.log(`URL FORM: ${process.env.VUE_APP_TITLE}`);
 
       this.stores = [
         ...this.stores,

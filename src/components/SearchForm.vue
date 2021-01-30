@@ -26,8 +26,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-        console.log(`SearchForm => searchParams: ${JSON.stringify(this.searchParams)}`);
-        this.$emit('search:store', this.searchParams)
+      this.$emit("search:store", this.searchParams);
     },
   },
 };
