@@ -35,7 +35,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Practical info
 
-Mock API: https://run.mocky.io/v3/8bd5bc4b-4cd7-43d4-8e1f-1b5f4bbd2b08 (SUCCESS)
+* Mock API: https://run.mocky.io/v3/8bd5bc4b-4cd7-43d4-8e1f-1b5f4bbd2b08 (SUCCESS)
+* If docker 'dies' between sessions, run 'sudo dockerd'
 
 ## Ref
 
