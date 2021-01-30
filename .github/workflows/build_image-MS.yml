@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  tests:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,6 +16,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+
+    - name: Install VUE/cli
+      run: npm i -g @vue/cli @vue/cli-service-global
+
     - name: Install dependencies
       run: npm run build
 
