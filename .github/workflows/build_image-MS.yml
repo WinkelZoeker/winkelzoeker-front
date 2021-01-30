@@ -18,6 +18,9 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
+      run: npm install
+
+    - name: VUE Build
       run: npm run build
 
     - name: DockerHub login
