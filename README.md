@@ -4,9 +4,17 @@
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
+  <a href="https://hub.docker.com/repository/docker/winkelzoeker/winkelzoeker.front" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/docker/image-size/winkelzoeker/winkelzoeker.front?label=DockerHub" />
+  </a>
 </p>
 
 > WinkelZoeker Front end!
+
+## Build Status
+
+![Build](https://github.com/WinkelZoeker/winkelzoeker-front/workflows/Build%20image%20via%20multi%20staged%20docker/badge.svg)
+
 
 ## Build Setup
 
