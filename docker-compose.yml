@@ -6,6 +6,6 @@ services:
     container_name: 'winkelzoeker-front'
     restart: always
     ports:
-      - 80:80
+      - 8080:8080
     environment:
       - SEARCH_API_URL=https://run.mocky.io/v3/8bd5bc4b-4cd7-43d4-8e1f-1b5f4bbd2b08

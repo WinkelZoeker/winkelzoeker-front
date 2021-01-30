@@ -2,7 +2,7 @@
   "name": "winkelzoeker-front",
   "organization": "winkelzoeker",
   "image": "winkelzoeker.front",
-  "tag": "latest",
+  "tag": "head",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "lint": "./node_modules/.bin/vue-cli-service lint",
     "image:build": "docker build -t $npm_package_organization/$npm_package_image:$npm_package_tag .",
     "image:push": "docker push $npm_package_organization/$npm_package_image",
-    "image:run": "docker run -it -p 8080:80 --rm --name $npm_package_image $npm_package_organization/$npm_package_image",
+    "image:run": "docker run -it -p 8080:8080 --rm --name $npm_package_image $npm_package_organization/$npm_package_image",
     "image:run:shell": "docker run -it -p 8080:80 --entrypoint /bin/sh --name $npm_package_image $npm_package_organization/$npm_package_image",
     "stack:up": "docker-compose -f docker-compose.yml up -d",
     "stack:down": "docker-compose -f docker-compose.yml down"
