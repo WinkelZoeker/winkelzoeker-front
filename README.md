@@ -39,9 +39,11 @@ Mock API: https://run.mocky.io/v3/8bd5bc4b-4cd7-43d4-8e1f-1b5f4bbd2b08 (SUCCESS)
 
 ## Ref
 
-https://www.taniarascia.com/getting-started-with-vue/
-https://auralinna.blog/post/2018/how-to-build-a-complete-form-with-vue-js/
-Env Variables, Docker and stuff: https://stackoverflow.com/questions/59722631/passing-environment-variables-at-runtime-to-vue-js-application-with-docker-compo
+* https://www.taniarascia.com/getting-started-with-vue/
+* https://auralinna.blog/post/2018/how-to-build-a-complete-form-with-vue-js/
+* Env Variables, Docker and stuff: https://stackoverflow.com/questions/59722631/passing-environment-variables-at-runtime-to-vue-js-application-with-docker-compo
+
+
 ## NOTES
 
 Continue from Ref 1, Computed Properties
