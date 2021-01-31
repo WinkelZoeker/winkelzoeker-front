@@ -30,12 +30,9 @@ export default {
         params: {...searchParams}
       };
 
-      console.log(`URL FORM => ${searchApiUrl}`);
-
-
       axios.get(searchApiUrl, queryParams).then(response => {
         console.log(`RESPONSE: ${JSON.stringify(response, null, 2)}`);
-        this.stores = response.data;
+        this.stores = response.data.data;
       }).catch(error => {
         console.log(`ERROR: ${JSON.stringify(error, null, 2)}`);
       });
