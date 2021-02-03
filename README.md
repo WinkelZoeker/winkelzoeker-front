@@ -66,10 +66,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * Env Variables, Docker and stuff: https://stackoverflow.com/questions/59722631/passing-environment-variables-at-runtime-to-vue-js-application-with-docker-compo
 
 
-## NOTES
-
-Continue from Ref 1, Computed Properties
-
 ## Author
 
 👤 **Rodrigo de Souza <rsouza01@gmail.com>**
