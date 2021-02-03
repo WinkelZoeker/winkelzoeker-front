@@ -18,11 +18,19 @@
 
 ## Build Setup
 
-```
-npm install
+First, clone locally this repository, then follow the instructions for running it from source or via docker-compose, along with the front end.
+
+```sh
+$ git clone https://github.com/WinkelZoeker/winkelzoeker-front.git
+$ cd ./winkelzoeker-front
+$ npm install
 ```
 
 ### Compiles and hot-reloads for development
+
+Before starting the web application, be sure that the API service is running on port 3000.
+
+
 ```
 npm run serve
 ```
