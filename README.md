@@ -38,6 +38,11 @@ Before starting the web application, be sure that the API service is running on 
 npm run serve
 ```
 
+Then point your broser to
+
+> http://localhost:8080/
+
+
 ### Compiles and minifies for production
 ```
 npm run build
