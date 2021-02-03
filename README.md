@@ -16,6 +16,9 @@
 ![Build](https://github.com/WinkelZoeker/winkelzoeker-front/workflows/Build%20image%20via%20multi%20staged%20docker/badge.svg)
 
 
+This is a small front end developed for consuming [winkelzoeker-api](https://github.com/WinkelZoeker/winkelzoeker-api).
+
+
 ## Build Setup
 
 First, clone locally this repository, then follow the instructions for running it from source or via docker-compose, along with the front end.
@@ -49,13 +52,10 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-## Practical info
+## Practical info/ References used during development
 
 * Mock API: https://run.mocky.io/v3/8bd5bc4b-4cd7-43d4-8e1f-1b5f4bbd2b08 (SUCCESS)
 * If docker 'dies' between sessions, run 'sudo dockerd'
-
-## Ref
-
 * https://www.taniarascia.com/getting-started-with-vue/
 * https://auralinna.blog/post/2018/how-to-build-a-complete-form-with-vue-js/
 * Env Variables, Docker and stuff: https://stackoverflow.com/questions/59722631/passing-environment-variables-at-runtime-to-vue-js-application-with-docker-compo
